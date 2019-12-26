@@ -3,6 +3,10 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
+        "@emotion/core": "^10.0.27",
+        "@emotion/styled": "^10.0.27",
+        "emotion": "^10.0.27",
+        "polished": "^3.4.2",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
         "react-router-dom": "^5.1.2",
@@ -14,7 +18,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "lint": "eslint src/**.{tsx,ts}"
+        "lint": "eslint src/*.{tsx,ts} src/**/*.{tsx,ts}"
     },
     "browserslist": {
         "production": [
