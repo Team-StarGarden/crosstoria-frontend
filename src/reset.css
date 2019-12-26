@@ -1,0 +1,37 @@
+/** Normailze */
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap');
+@import-normalize;
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    font-size: 16px;
+}
+
+ul, ol {
+    list-style: none;
+    padding-left: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body, button, input {
+    font-family: 'Noto Serif KR', serif;
+}
+
+*:focus {
+  outline: none;
+}
+
+#root {
+  min-width: 100%;
+  min-height: 100vh;
+}

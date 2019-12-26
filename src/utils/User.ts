@@ -12,9 +12,9 @@ export interface LocalUser {
 export type ContextualUser = LocalUser | NoUser
 
 export function isLocalUser(user: ContextualUser): user is LocalUser {
-  return "name" in user
+  return 'name' in user;
 }
 
-export const defaultState: ContextualUser = {}
+export const defaultState: ContextualUser = {};
 
 export const UserContext = React.createContext<ContextualUser>(defaultState);
