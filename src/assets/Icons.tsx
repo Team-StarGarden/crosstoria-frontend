@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core';
 import React from 'react';
 
 export const Add: React.FC = () => (
@@ -12,6 +14,17 @@ export const Alarm: React.FC = () => (
     <path d="M23.38 19.07l-3.28-4.92c-.07-.1-.1-.21-.1-.33V10c0-3.74-2.56-6.86-6.03-7.74.02-.09.03-.17.03-.26 0-1.1-.9-2-2-2s-2 .9-2 2c0 .09.01.17.03.26C6.56 3.14 4 6.26 4 10v3.82c0 .12-.03.23-.1.33L.62 19.07c-.27.4.02.93.49.93H8c0 2.21 1.79 4 4 4s4-1.79 4-4h6.89c.47 0 .76-.53.49-.93zM12 22c-1.1 0-2-.9-2-2h4c0 1.1-.9 2-2 2zm7.88-4H4.12c-.16 0-.26-.18-.17-.32l1.72-2.58.33-.49V10c0-3.31 2.69-6 6-6s6 2.69 6 6v4.61l.34.5 1.72 2.58c.08.13-.01.31-.18.31z"/>
   </svg>
 );
+
+export const Arrow: React.FC<React.SVGProps<SVGSVGElement>> = props => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+    <path d="M11.3 17.4L4 10.1c-.4-.4-.4-1.1 0-1.5.4-.4 1-.4 1.4 0l5.9 5.9c.4.4 1 .4 1.4 0l5.9-5.9c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-7.3 7.3c-.4.4-1 .4-1.4.1z"/>
+  </svg>
+);
+
+export const ArrowDown: React.FC = () => <Arrow  />;
+export const ArrowUp: React.FC = () => <Arrow style={{transform: 'rotate(180deg)'}} />;
+export const ArrowLeft: React.FC = () => <Arrow style={{transform: 'rotate(90deg)'}} />;
+export const ArrowRight: React.FC = () => <Arrow style={{transform: 'rotate(270deg)'}} />;
 
 export const Flag: React.FC = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
