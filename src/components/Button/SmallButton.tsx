@@ -2,9 +2,9 @@ import { css } from '@emotion/core';
 import * as styles from '../../constants';
 
 const SmallButton = css`
-  padding: 0 19px;
-  height: 48px;
-  line-height: 46px;
+  padding: 0 8px;
+  height: 32px;
+  line-height: 30px;
 
   svg {
     position: relative;

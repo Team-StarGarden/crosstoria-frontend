@@ -5,22 +5,22 @@ const RegularButton = css`
   ${styles.TEXT_R};
   color: ${styles.YELLOW_500};
 
-  padding: 0 19px;
-  height: 64px;
-  line-height: 62px;
+  padding: 0 12px;
+  height: 48px;
+  line-height: 46px;
 
   svg {
     position: relative;
-    top: 5px;
+    top: 6px;
     width: 24px;
   }
 
   &.hasBorder {
     color: ${styles.YELLOW_100};
 
-    padding: 0 16px;
-    height: 48px;
-    line-height: 48px;
+    padding: 0 19px;
+    height: 64px;
+    line-height: 64px;
 
     svg {
       top: 6px;

@@ -5,15 +5,17 @@ import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-import { TEXT_R, TEXT_S, SUBTEXT_XS, TRANSITION_FAST, YELLOW_100, BROWN_500 } from '../constants';
 import { TextInput } from '../components/CommonComponents';
 import { mapBackground, centerContent, withGlobalOptions } from '../components/GlobalStyles';
 import ResponsiveLogo from '../components/ResponsiveLogo';
 import { Button } from '../components/Button';
 
+import * as icons from '../assets/Icons';
+import * as styles from '../constants';
+
 export const ForgotPasswordLink = styled(Link)`
-  ${SUBTEXT_XS}
-  ${TRANSITION_FAST};
+  ${styles.SUBTEXT_XS}
+  ${styles.TRANSITION_FAST};
 
   width: 100%;
   margin: 16px 0;
@@ -26,42 +28,19 @@ export const ForgotPasswordLink = styled(Link)`
   transition-property: color;
 
   :hover {
-      color: ${YELLOW_100};
+      color: ${styles.YELLOW_100};
   }
 `;
 
-/*export const LoginButton = styled.button`
-  ${TEXT_R};
-  ${TRANSITION_FAST};
-
-  display: block;
-  
-  width: 100%;
-  line-height: 46px;
-
-  color: ${YELLOW_100};
-  border: 1px solid ${YELLOW_100};
-  background: none;
-
-  transition-property: color, background;
-
-  cursor: pointer;
-
-  :hover {
-    color: ${BROWN_500};
-    background: ${YELLOW_100};
-  }
-`;*/
-
 export const SigninButton = styled(Link)`
-  ${TEXT_S};
+  ${styles.TEXT_S};
 
   display: block;
   padding: 8px;
   margin: 8px auto 0;
   width: fit-content;
 
-  color: ${YELLOW_100};
+  color: ${styles.YELLOW_100};
   text-align: center;
   text-decoration: none;
 `;
@@ -73,7 +52,7 @@ export const Login: React.FC = () => {
       <TextInput id="" type="email" placeholder="email@example.com"/>
       <TextInput id="" type="password" placeholder="＊＊＊＊＊＊＊＊"/>
       <ForgotPasswordLink to="/lost-password">비밀번호를 잊으셨나요?</ForgotPasswordLink>
-      <Button hasBorder size="regular" width="100%">로그인</Button>
+      <Button hasBorder size="regular" width="100%"><icons.SignIn />로그인</Button>
       <SigninButton to="/register">회원 가입 신청하기</SigninButton>
     </form>
   );
