@@ -103,7 +103,7 @@ const Buttons = {
   large: LargeButton,
   regular: RegularButton,
   small: SmallButton
-};
+} as const;
 
 export const Button: React.FC<ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ hasBorder, size, width, ...props }) => {
   const cssSet = [

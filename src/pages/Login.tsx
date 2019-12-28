@@ -9,6 +9,7 @@ import { TEXT_R, TEXT_S, SUBTEXT_XS, TRANSITION_FAST, YELLOW_100, BROWN_500 } fr
 import { TextInput } from '../components/CommonComponents';
 import { mapBackground, centerContent, withGlobalOptions } from '../components/GlobalStyles';
 import ResponsiveLogo from '../components/ResponsiveLogo';
+import { Button } from '../components/Button';
 
 export const ForgotPasswordLink = styled(Link)`
   ${SUBTEXT_XS}
@@ -29,7 +30,7 @@ export const ForgotPasswordLink = styled(Link)`
   }
 `;
 
-export const LoginButton = styled.button`
+/*export const LoginButton = styled.button`
   ${TEXT_R};
   ${TRANSITION_FAST};
 
@@ -50,7 +51,7 @@ export const LoginButton = styled.button`
     color: ${BROWN_500};
     background: ${YELLOW_100};
   }
-`;
+`;*/
 
 export const SigninButton = styled(Link)`
   ${TEXT_S};
@@ -72,7 +73,7 @@ export const Login: React.FC = () => {
       <TextInput id="" type="email" placeholder="email@example.com"/>
       <TextInput id="" type="password" placeholder="＊＊＊＊＊＊＊＊"/>
       <ForgotPasswordLink to="/lost-password">비밀번호를 잊으셨나요?</ForgotPasswordLink>
-      <LoginButton>로그인</LoginButton>
+      <Button hasBorder size="regular" width="100%">로그인</Button>
       <SigninButton to="/register">회원 가입 신청하기</SigninButton>
     </form>
   );

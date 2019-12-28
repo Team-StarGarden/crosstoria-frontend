@@ -5,7 +5,7 @@ const LargeButton = css`
   ${styles.TEXT_R};
   color: ${styles.YELLOW_500};
 
-  padding: 0 23px;
+  padding: 0 2px;
   height: 80px;
   line-height: 78px;
 
