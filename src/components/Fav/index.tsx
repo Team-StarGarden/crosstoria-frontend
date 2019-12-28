@@ -31,7 +31,8 @@ export const FAV = styled.button`
     transition-property: fill;
   }
 
-  :focus, :hover {
+  :focus,
+  :hover {
     svg {
       fill: ${styles.YELLOW_500};
     }
@@ -47,6 +48,8 @@ export const FAV = styled.button`
 
   :disabled {
     background: ${styles.YELLOW_900};
+
+    cursor: none;
 
     svg {
       fill: ${styles.BROWN_500};
