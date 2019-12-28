@@ -18,6 +18,7 @@ type ButtonProps = {
 const Common = css`
   ${styles.TRANSITION_FAST};
   cursor: pointer;
+  user-select: none;
 
   :disabled {
     cursor: unset;
@@ -25,6 +26,7 @@ const Common = css`
 `;
 
 const BorderOn = css`
+  ${styles.SUBTEXT_XS};
   border: 1px solid ${styles.YELLOW_100};
   background: none;
 

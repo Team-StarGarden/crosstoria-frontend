@@ -5,25 +5,25 @@ const LargeButton = css`
   ${styles.TEXT_R};
   color: ${styles.YELLOW_500};
 
-  padding: 0 2px;
-  height: 80px;
-  line-height: 78px;
+  padding: 0 8px;
+  height: 64px;
+  line-height: 62px;
 
   svg {
     position: relative;
-    top: 9px;
-    width: 32px;
+    top: 8px;
+    width: 48px;
   }
 
   &.hasBorder {
     color: ${styles.YELLOW_100};
 
-    padding: 0 24px;
-    height: 80px;
-    line-height: 80px;
+    padding: 0 23px;
+    height: 96px;
+    line-height: 94px;
 
     svg {
-      top: 8px;
+      top: 18px;
     }
 
     :focus, :hover, :active {
