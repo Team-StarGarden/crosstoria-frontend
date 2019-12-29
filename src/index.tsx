@@ -20,24 +20,12 @@ const RootRedirector: React.FC = () => {
 const Root: React.FC = () => (
   <UserContext.Provider value={defaultState}>
     <BrowserRouter>
-      <Route exact path="/">
-        <RootRedirector />
-      </Route>
-      <Route path="/login">
-        <Login />
-      </Route>
-      <Route path="/register">
-        <Register />
-      </Route>
-      <Route path="/lost-password">
-        <LostPassword />
-      </Route>
-      <Route path="/component-test">
-        <ComponentTest />
-      </Route>
-      <Route path="/main">
-        <Main />
-      </Route>
+      <Route exact path="/" component={RootRedirector} />
+      <Route path="/login" component={Login} />
+      <Route path="/register" component={Register} />
+      <Route path="/lost-password" component={LostPassword} />
+      <Route path="/component-test" component={ComponentTest} />
+      <Route path="/main" component={Main} />
     </BrowserRouter>
   </UserContext.Provider>
 );
