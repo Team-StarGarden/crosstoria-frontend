@@ -4,9 +4,9 @@ import * as styles from '../../constants';
 
 type ButtonWrapperProps = {
   /* 위치를 결정합니다. */
-  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' ;
+  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
   /* 안쪽 여백을 결정합니다. */
-  padding?: 'regular' | 'small' | 'x-small'; 
+  padding?: 'regular' | 'small' | 'x-small';
 };
 
 const ButtonWrapperStyle = css`
@@ -37,21 +37,27 @@ const ButtonWrapperStyle = css`
   }
 `;
 
-const ButtonWrapperPadding = (PaddingSize: 'regular' | 'small' | 'x-small'): string => {
-  switch(PaddingSize) {
-  case 'regular':
-    return `padding: ${styles.SPACE_R}`;
-  case 'small':
-    return `padding: ${styles.SPACE_S}`;
-  case 'x-small':
-    return `padding: ${styles.SPACE_XS}`;
+const ButtonWrapperPadding = (
+  PaddingSize: 'regular' | 'small' | 'x-small'
+): string => {
+  switch (PaddingSize) {
+    case 'regular':
+      return `padding: ${styles.SPACE_R}`;
+    case 'small':
+      return `padding: ${styles.SPACE_S}`;
+    case 'x-small':
+      return `padding: ${styles.SPACE_XS}`;
   }
 };
 
-export const ButtonWrapper: React.FC<ButtonWrapperProps> = ({ position, padding, ...props }) => {
+export const ButtonWrapper: React.FC<ButtonWrapperProps> = ({
+  position,
+  padding,
+  ...props
+}) => {
   const cssSet = [
-    ButtonWrapperStyle, 
-    padding && ButtonWrapperPadding(padding)
+    ButtonWrapperStyle,
+    padding && ButtonWrapperPadding(padding),
   ].filter(Boolean);
   return <div className={position && position} css={cssSet} {...props} />;
 };

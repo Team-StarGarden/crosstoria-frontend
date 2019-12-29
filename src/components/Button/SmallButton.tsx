@@ -21,14 +21,16 @@ const SmallButton = css`
       top: 3px;
     }
 
-    :focus, :hover, :active {
+    :focus,
+    :hover,
+    :active {
       color: ${styles.BROWN_500};
     }
 
     :disabled {
       background: none;
 
-      color: ${styles.YELLOW_500}; 
+      color: ${styles.YELLOW_500};
 
       path {
         fill: ${styles.YELLOW_500};
