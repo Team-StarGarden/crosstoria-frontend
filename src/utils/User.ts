@@ -1,6 +1,6 @@
 import React from 'react';
 
-export type NoUser = {}
+export type NoUser = {};
 
 export interface LocalUser {
   id: number;
@@ -9,7 +9,7 @@ export interface LocalUser {
   gender: string;
 }
 
-export type ContextualUser = LocalUser | NoUser
+export type ContextualUser = LocalUser | NoUser;
 
 export function isLocalUser(user: ContextualUser): user is LocalUser {
   return 'name' in user;
