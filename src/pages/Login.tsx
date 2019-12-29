@@ -47,7 +47,7 @@ export const SigninButton = styled(Link)`
 
 export const Login: React.FC = () => {
   return (
-    <form css={css`width: calc(100% - 128px); max-width: 272px;`}>
+    <form css={css`width: calc(100% - 2 * ${styles.SPACE_XXL}); max-width: 272px;`}>
       <ResponsiveLogo />
       <TextInput id="" type="email" placeholder="email@example.com"/>
       <TextInput id="" type="password" placeholder="＊＊＊＊＊＊＊＊"/>
