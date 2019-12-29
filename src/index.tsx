@@ -7,6 +7,7 @@ import { UserContext, defaultState, isLocalUser } from './utils/User';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import LostPassword from './pages/LostPassword';
+import ComponentTest from './pages/ComponentTest';
 
 import './reset.css';
 
@@ -30,6 +31,9 @@ const Root: React.FC = () => (
       </Route>
       <Route path="/lost-password">
         <LostPassword />
+      </Route>
+      <Route path="/component-test">
+        <ComponentTest />
       </Route>
     </BrowserRouter>
   </UserContext.Provider>
