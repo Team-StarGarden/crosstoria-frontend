@@ -2,14 +2,14 @@
 import { jsx, css } from '@emotion/core';
 import * as styles from '../../constants';
 
-type BtnWrapperProps = {
+type ButtonWrapperProps = {
   /* 위치를 결정합니다. */
   position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' ;
   /* 안쪽 여백을 결정합니다. */
   padding?: 'regular' | 'small' | 'x-small'; 
 };
 
-const BtnWrapperStyle = css`
+const ButtonWrapperStyle = css`
   background: ${styles.BROWN_100};
 
   &.top-left {
@@ -37,7 +37,7 @@ const BtnWrapperStyle = css`
   }
 `;
 
-const BtnWrapperPadding = (PaddingSize: 'regular' | 'small' | 'x-small'): string => {
+const ButtonWrapperPadding = (PaddingSize: 'regular' | 'small' | 'x-small'): string => {
   switch(PaddingSize) {
   case 'regular':
     return `padding: ${styles.SPACE_R}`;
@@ -48,10 +48,12 @@ const BtnWrapperPadding = (PaddingSize: 'regular' | 'small' | 'x-small'): string
   }
 };
 
-export const BtnWrapper: React.FC<BtnWrapperProps> = ({ position, padding, ...props }) => {
+export const ButtonWrapper: React.FC<ButtonWrapperProps> = ({ position, padding, ...props }) => {
   const cssSet = [
-    BtnWrapperStyle, 
-    padding && BtnWrapperPadding(padding)
+    ButtonWrapperStyle, 
+    padding && ButtonWrapperPadding(padding)
   ].filter(Boolean);
   return <div className={position && position} css={cssSet} {...props} />;
 };
+
+export default ButtonWrapper;
