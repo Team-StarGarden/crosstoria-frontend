@@ -1,9 +1,10 @@
-import React, { useContext } from 'react' ;
+import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import { UserContext, defaultState, isLocalUser } from './utils/User';
 
+import Main from './pages/Main';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import LostPassword from './pages/LostPassword';
@@ -13,7 +14,6 @@ import './reset.css';
 
 const RootRedirector: React.FC = () => {
   const user = useContext(UserContext);
-  
   return <Redirect to={isLocalUser(user) ? '/home' : '/login'} />;
 };
 
@@ -34,6 +34,9 @@ const Root: React.FC = () => (
       </Route>
       <Route path="/component-test">
         <ComponentTest />
+      </Route>
+      <Route path="/main">
+        <Main />
       </Route>
     </BrowserRouter>
   </UserContext.Provider>
