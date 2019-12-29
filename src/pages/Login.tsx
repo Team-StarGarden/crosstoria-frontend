@@ -6,7 +6,11 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
 import { TextInput } from '../components/CommonComponents';
-import { mapBackground, centerContent, withGlobalOptions } from '../components/GlobalStyles';
+import {
+  mapBackground,
+  centerContent,
+  withGlobalOptions,
+} from '../components/GlobalStyles';
 import ResponsiveLogo from '../components/ResponsiveLogo';
 import { Button } from '../components/Button';
 
@@ -28,7 +32,7 @@ export const ForgotPasswordLink = styled(Link)`
   transition-property: color;
 
   :hover {
-      color: ${styles.YELLOW_100};
+    color: ${styles.YELLOW_100};
   }
 `;
 
@@ -47,12 +51,22 @@ export const SigninButton = styled(Link)`
 
 export const Login: React.FC = () => {
   return (
-    <form css={css`width: calc(100% - 2 * ${styles.SPACE_XXL}); max-width: 272px;`}>
+    <form
+      css={css`
+        width: calc(100% - 2 * ${styles.SPACE_XXL});
+        max-width: 272px;
+      `}
+    >
       <ResponsiveLogo />
-      <TextInput id="" type="email" placeholder="email@example.com"/>
-      <TextInput id="" type="password" placeholder="＊＊＊＊＊＊＊＊"/>
-      <ForgotPasswordLink to="/lost-password">비밀번호를 잊으셨나요?</ForgotPasswordLink>
-      <Button hasBorder size="regular" width="100%"><icons.SignIn />로그인</Button>
+      <TextInput id="" type="email" placeholder="email@example.com" />
+      <TextInput id="" type="password" placeholder="＊＊＊＊＊＊＊＊" />
+      <ForgotPasswordLink to="/lost-password">
+        비밀번호를 잊으셨나요?
+      </ForgotPasswordLink>
+      <Button hasBorder size="regular" width="100%">
+        <icons.SignIn />
+        로그인
+      </Button>
       <SigninButton to="/register">회원 가입 신청하기</SigninButton>
     </form>
   );

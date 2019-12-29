@@ -1,11 +1,7 @@
 import React from 'react';
 
 export const LostPassword: React.FC = () => {
-  return (
-    <>
-      
-    </>
-  );
+  return <></>;
 };
 
 export default LostPassword;
