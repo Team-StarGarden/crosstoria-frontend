@@ -12,7 +12,7 @@ type ButtonProps = {
   /* 버튼의 크기를 설정합니다. */
   size: 'large' | 'regular' | 'small';
   /* 버튼의 너비를 임의로 설정합니다. */
-  width?: string | number ;
+  width?: string | number;
 };
 
 const Common = css`
@@ -104,14 +104,27 @@ const BorderOff = css`
 const Buttons = {
   large: LargeButton,
   regular: RegularButton,
-  small: SmallButton
+  small: SmallButton,
 } as const;
 
-export const Button: React.FC<ButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ hasBorder, size, width, ...props }) => {
+export const Button: React.FC<ButtonProps &
+  React.ButtonHTMLAttributes<HTMLButtonElement>> = ({
+  hasBorder,
+  size,
+  width,
+  ...props
+}) => {
   const cssSet = [
     Common,
     hasBorder ? BorderOn : BorderOff,
-    Buttons[size]   
+    Buttons[size],
   ].filter(Boolean);
-  return <button className={hasBorder ? 'hasBorder' : ''} style={{ width: width || 'fit-content' }} css={cssSet} {...props} />;
+  return (
+    <button
+      className={hasBorder ? 'hasBorder' : ''}
+      style={{ width: width || 'fit-content' }}
+      css={cssSet}
+      {...props}
+    />
+  );
 };
