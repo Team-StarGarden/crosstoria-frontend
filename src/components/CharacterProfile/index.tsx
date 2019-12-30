@@ -57,6 +57,7 @@ const CharacterProfileHoverStyle = css`
   ${styles.TRANSITION_SLOW}
   transition-property: border;
 
+  border: 0px solid ${styles.YELLOW_100};
   border-radius: 100%;
 
   position: absolute;
