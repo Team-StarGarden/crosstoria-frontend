@@ -21,7 +21,7 @@ export const Arrow: React.FC<React.SVGProps<SVGSVGElement>> = props => (
   </svg>
 );
 
-export const ArrowDown: React.FC = () => <Arrow />;
+export const ArrowDown: React.FC<React.SVGProps<SVGSVGElement>> = props => <Arrow {...props}/>;
 export const ArrowUp: React.FC = () => (
   <Arrow style={{ transform: 'rotate(180deg)' }} />
 );

@@ -1,10 +1,18 @@
 /** @jsx jsx */
 
 import React from 'react';
-import { jsx } from '@emotion/core';
+import { jsx, css } from '@emotion/core';
 
 export const MenuButton: React.FC<{ id: string }> = ({ children }) => {
-  return <React.Fragment>{children}</React.Fragment>;
+  return (
+    <div
+      css={css`
+        text-align: right;
+      `}
+    >
+      {children}
+    </div>
+  );
 };
 
 export const MenuBar: React.FC = () => {
