@@ -1,7 +1,7 @@
 /** @jsx jsx */
 
 import React from 'react';
-import { jsx } from '@emotion/core';
+import { jsx, css } from '@emotion/core';
 
 import UserSummary from './UserSummary';
 import HashTagList from './HashTagList';
@@ -9,11 +9,16 @@ import MenuBar from './MenuBar';
 
 export const SideBar: React.FC = () => {
   return (
-    <React.Fragment>
+    <div
+      css={css`
+        position: fixed;
+        width: 15rem;
+      `}
+    >
       <UserSummary />
       <HashTagList />
       <MenuBar />
-    </React.Fragment>
+    </div>
   );
 };
 
