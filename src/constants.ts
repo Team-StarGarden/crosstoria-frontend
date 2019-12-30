@@ -77,7 +77,7 @@ export const TRANSITION_SLOW = css`
 
 export const BREAKPOINT_XL = 1200;
 export const BREAKPOINT_L = 960;
-export const BREAKPOINT_R = 756;
+export const BREAKPOINT_R = 768;
 export const BREAKPOINT_S = 480;
 
 export const MEDIAQUERY_OVER_XL = `@media (min-width: ${BREAKPOINT_XL + 1}px)`;
