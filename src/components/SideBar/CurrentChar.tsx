@@ -18,7 +18,7 @@ type CurrentCharProps = {
   characterJob: string;
 };
 
-export const UserSummary: React.FC<CurrentCharProps> = ({
+export const CurrentChar: React.FC<CurrentCharProps> = ({
   characterName,
   characterJob,
 }) => {
@@ -47,25 +47,25 @@ export const UserSummary: React.FC<CurrentCharProps> = ({
           src="https://placehold.it/128x128"
           size="x-large"
         />
-        <div
+        <p
           css={css`
             ${styles.TEXT_L};
-            margin-top: ${styles.SPACE_XS};
+            margin: ${styles.SPACE_XS} 0 0;
           `}
         >
           {characterName}
-        </div>
-        <div
+        </p>
+        <p
           css={css`
             ${styles.SUBTEXT_XS};
-            margin-top: 2px;
+            margin: 2px 0 0;
           `}
         >
           {characterJob}
-        </div>
+        </p>
       </div>
     </React.Fragment>
   );
 };
 
-export default UserSummary;
+export default CurrentChar;
