@@ -5,7 +5,7 @@ import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 
-import { TextInput } from '../components/CommonComponents';
+import { TextInput } from '../components/Input/TextInput';
 import {
   mapBackground,
   centerContent,
