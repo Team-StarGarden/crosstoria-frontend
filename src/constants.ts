@@ -48,6 +48,11 @@ export const TEXT_S = css`
   font-size: 0.875rem;
   line-height: 1.5;
 `;
+export const SUBTEXT_R = css`
+  color: ${YELLOW_500};
+  font-size: 1rem;
+  line-height: 1.5;
+`;
 export const SUBTEXT_S = css`
   color: ${YELLOW_500};
   font-size: 0.875rem;
