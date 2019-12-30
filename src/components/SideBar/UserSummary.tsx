@@ -6,34 +6,62 @@ import { jsx, css } from '@emotion/core';
 import * as styles from '../../constants';
 import * as icons from '../../assets/Icons';
 
-export const UserSummary: React.FC = () => {
+import { Button } from '../Button';
+import { CharacterProfile } from '../CharacterProfile';
+
+/* TODO: 정보를 나타낼 캐릭터의 고유 번호를 설정하면 나머지 요소가 저절로 정해지도록 하여야 합니다. */
+
+type CurrentCharProps = {
+  /* 캐릭터의 이름을 설정합니다. */
+  characterName: string;
+  /* 캐릭터의 직업을 설정합니다. */
+  characterJob: string;
+};
+
+export const UserSummary: React.FC<CurrentCharProps> = ({
+  characterName,
+  characterJob,
+}) => {
   return (
     <React.Fragment>
       <div
         css={css`
-          background: black;
+          padding: ${styles.SPACE_L};
+          background: ${styles.BROWN_100};
+          text-align: center;
         `}
       >
-        <icons.Heart
+        <div
           css={css`
-            width: 64px;
+            position: absolute;
+            top: ${styles.SPACE_S};
+            right: ${styles.SPACE_S};
           `}
+        >
+          <Button size="regular">
+            <icons.ArrowDown />
+          </Button>
+        </div>
+        <CharacterProfile
+          href="https://www.naver.com"
+          src="https://placehold.it/128x128"
+          size="x-large"
         />
         <div
           css={css`
             ${styles.TEXT_L};
-            text-align: center;
+            margin-top: ${styles.SPACE_XS};
           `}
         >
-          위티
+          {characterName}
         </div>
         <div
           css={css`
-            ${styles.TEXT_S};
-            text-align: center;
+            ${styles.SUBTEXT_XS};
+            margin-top: 2px;
           `}
         >
-          상인
+          {characterJob}
         </div>
       </div>
     </React.Fragment>
