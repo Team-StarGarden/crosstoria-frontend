@@ -13,6 +13,8 @@ type ButtonProps = {
   size: 'large' | 'regular' | 'small';
   /* 버튼의 너비를 임의로 설정합니다. */
   width?: string | number;
+  /* 클릭해서 발생하는 이벤트가 있다면, 해당 props를 사용합니다. */
+  onClick? : () => void;
 };
 
 const Common = css`
@@ -112,6 +114,7 @@ export const Button: React.FC<ButtonProps &
   hasBorder,
   size,
   width,
+  onClick,
   ...props
 }) => {
   const cssSet = [
@@ -124,6 +127,7 @@ export const Button: React.FC<ButtonProps &
       className={hasBorder ? 'hasBorder' : ''}
       style={{ width: width || 'fit-content' }}
       css={cssSet}
+      onClick={onClick}
       {...props}
     />
   );
