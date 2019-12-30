@@ -4,9 +4,10 @@ import React from 'react';
 import { jsx, css } from '@emotion/core';
 
 import * as styles from '../../constants';
-import UserSummary from './UserSummary';
+import UserSummary from './CurrentChar';
 import HashTagList from './HashTagList';
-import MenuBar from './MenuBar';
+import PlaceNav from './PlaceNav';
+import BottomSetting from './BottomSetting';
 
 export const SideBar: React.FC = () => {
   return (
@@ -23,7 +24,8 @@ export const SideBar: React.FC = () => {
     >
       <UserSummary characterName="캐릭터의 이름" characterJob="캐릭터의 직업" />
       <HashTagList />
-      <MenuBar />
+      <PlaceNav />
+      <BottomSetting />
     </div>
   );
 };
