@@ -18,6 +18,12 @@ type CurrentCharProps = {
   characterJob: string;
 };
 
+/* 모바일일 경우, 펼쳐진 sidebar를 닫는 함수입니다. */
+
+const sidebarCloseEvent = () => {
+  document.body.classList.remove('sidebar-opened');
+};
+
 export const CurrentChar: React.FC<CurrentCharProps> = ({
   characterName,
   characterJob,
@@ -31,6 +37,21 @@ export const CurrentChar: React.FC<CurrentCharProps> = ({
           text-align: center;
         `}
       >
+        <div
+          css={css`
+            position: absolute;
+            top: ${styles.SPACE_S};
+            left: ${styles.SPACE_S};
+
+            ${styles.MEDIAQUERY_OVER_R} {
+              display: none;
+            }
+          `}
+        >
+          <Button size="regular" onClick={sidebarCloseEvent}>
+            <icons.Close />
+          </Button>
+        </div>
         <div
           css={css`
             position: absolute;
