@@ -19,9 +19,9 @@ export const Register: React.FC = () => {
     <React.Fragment>
       <ButtonWrapper position="top-left" padding="x-small">
         <a href=".">
-        <Button size="large">
-          <icons.ArrowLeft />
-        </Button>
+          <Button size="large">
+            <icons.ArrowLeft />
+          </Button>
         </a>
       </ButtonWrapper>
       <form
