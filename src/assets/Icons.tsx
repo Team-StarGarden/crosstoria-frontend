@@ -21,7 +21,9 @@ export const Arrow: React.FC<React.SVGProps<SVGSVGElement>> = props => (
   </svg>
 );
 
-export const ArrowDown: React.FC<React.SVGProps<SVGSVGElement>> = props => <Arrow {...props}/>;
+export const ArrowDown: React.FC<React.SVGProps<SVGSVGElement>> = props => (
+  <Arrow {...props} />
+);
 export const ArrowUp: React.FC = () => (
   <Arrow style={{ transform: 'rotate(180deg)' }} />
 );
@@ -34,7 +36,7 @@ export const ArrowRight: React.FC = () => (
 
 export const Close: React.FC = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-    <path d="M19 5c-.4-.4-1-.4-1.4 0L12 10.6 6.4 5c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l5.6 5.6L5 17.6c-.4.4-.4 1 0 1.4.4.4 1 .4 1.4 0l5.6-5.6 5.6 5.6c.4.4 1 .4 1.4 0 .4-.4.4-1 0-1.4L13.4 12 19 6.4c.4-.4.4-1 0-1.4z"/>
+    <path d="M19 5c-.4-.4-1-.4-1.4 0L12 10.6 6.4 5c-.4-.4-1-.4-1.4 0-.4.4-.4 1 0 1.4l5.6 5.6L5 17.6c-.4.4-.4 1 0 1.4.4.4 1 .4 1.4 0l5.6-5.6 5.6 5.6c.4.4 1 .4 1.4 0 .4-.4.4-1 0-1.4L13.4 12 19 6.4c.4-.4.4-1 0-1.4z" />
   </svg>
 );
 
@@ -102,8 +104,8 @@ export const Talk: React.FC = () => (
   </svg>
 );
 
-export const Write: React.FC = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+export const Write: React.FC<React.SVGProps<SVGSVGElement>> = props => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
     <path d="M22.35 6.67V2.98c0-1.06-1.29-1.6-2.04-.84l-3.64 3.64c-.2.2-.47.31-.74.31H13.9c-2.4 0-4.71.9-6.46 2.53l-.04.03a9.497 9.497 0 00-3.04 6.97v2.39c-.02.05-.04.09-.06.14L2.65 19.8c-.64.64-1 1.51-1 2.41.91 0 1.77-.36 2.41-1l1.65-1.65c.05-.02.09-.04.14-.06h7.22c4.13 0 7.38-4.31 8.46-5.95a.4.4 0 00-.34-.62h-1.25c-.33 0-.51-.4-.29-.65 1.55-1.67 2.7-3.51 2.7-5.61zm-6.52 6.52l-1.51 1.34h3.65c.26 0 .4.32.21.5-1.17 1.12-3.11 2.48-5.11 2.48H8.24c-.17 0-.26-.21-.14-.33l6.5-6.5a.38.38 0 00-.27-.65c-1.22 0-2.39.49-3.26 1.35l-4.38 4.38c-.12.12-.33.04-.33-.14v-.02c0-2.07.86-4.05 2.39-5.46l.06-.06a7.49 7.49 0 015.1-2h2.95c.22 0 .43-.09.58-.24l2.92-2.92v1.74c-.01 2.32-2.24 4.5-4.53 6.53z" />
   </svg>
 );

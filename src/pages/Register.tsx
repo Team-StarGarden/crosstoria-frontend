@@ -18,9 +18,11 @@ export const Register: React.FC = () => {
   return (
     <React.Fragment>
       <ButtonWrapper position="top-left" padding="x-small">
+        <a href=".">
         <Button size="large">
           <icons.ArrowLeft />
         </Button>
+        </a>
       </ButtonWrapper>
       <form
         css={css`
