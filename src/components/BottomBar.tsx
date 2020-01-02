@@ -12,8 +12,7 @@ export const BottomButton: React.FC = ({ children }) => {
     <Button
       size="regular"
       css={css`
-        margin-right: ${styles.SPACE_L};
-        height: 80px;
+        margin-right: ${styles.SPACE_R};
       `}
     >
       {children}
@@ -25,26 +24,27 @@ export const BottomBar: React.FC = () => {
   return (
     <div
       css={css`
-        background: ${styles.BROWN_100};
         position: fixed;
-        bottom: 0px;
-        right: 0px;
-        height: 80px;
         left: 256px;
+        right: 0px;
+        bottom: 0px;
+        height: 80px;
+        background: ${styles.BROWN_100};
       `}
     >
       <div
         css={css`
-          padding-left: ${styles.SPACE_L};
+          padding-left: ${styles.SPACE_R};
           position: absolute;
           left: 0;
         `}
       >
         <BottomButton>
-          <icons.ArrowLeft />
+          <icons.Talk />
         </BottomButton>
+
         <BottomButton>
-          <icons.ArrowLeft />
+          <icons.Log />
         </BottomButton>
       </div>
       <div
@@ -54,15 +54,15 @@ export const BottomBar: React.FC = () => {
         `}
       >
         <BottomButton>
-          <icons.ArrowLeft />
+          <icons.Flag />
         </BottomButton>
 
         <BottomButton>
-          <icons.ArrowLeft />
+          <icons.Alarm />
         </BottomButton>
 
         <BottomButton>
-          <icons.ArrowLeft />
+          <icons.Message />
         </BottomButton>
       </div>
     </div>
