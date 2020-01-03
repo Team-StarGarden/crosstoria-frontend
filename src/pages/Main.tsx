@@ -3,15 +3,16 @@
 import React from 'react';
 import { jsx, css } from '@emotion/core';
 
-import { Button } from '../components/Button';
+import * as icons from '../assets/Icons';
+
 import * as styles from '../constants';
+import { FAV } from '../components/FAV';
+import { Button } from '../components/Button';
 import { SideBar } from '../components/SideBar';
 import { SideBarOnButton } from '../components/SideBar/SideBarOnButton';
 import BottomBar from '../components/BottomBar';
 import ResponsiveLogo from '../components/ResponsiveLogo';
 import ButtonWrapper from '../components/Button/ButtonWrapper';
-
-import * as icons from '../assets/Icons';
 
 export const Banner: React.FC = () => {
   return (
@@ -30,26 +31,6 @@ export const Banner: React.FC = () => {
     </div>
   );
 };
-export const WriteButton: React.FC = () => {
-  return (
-    <ButtonWrapper
-      css={css`
-        position: fixed;
-        background-color: ${styles.YELLOW_100};
-        right: 25px;
-        bottom: 90px;
-        height: max-content;
-        width: max-content;
-        border-radius: 50%;
-        padding: 10px;
-      `}
-    >
-      <Button size="large">
-        <icons.Write />
-      </Button>
-    </ButtonWrapper>
-  );
-};
 
 export const Contents: React.FC = () => {
   return <React.Fragment></React.Fragment>;
@@ -60,7 +41,8 @@ export const Main: React.FC = () => {
     <React.Fragment>
       <SideBar />
       <SideBarOnButton />
-      <WriteButton />
+      <BottomBar />
+      <FAV><icons.Write /></FAV>
       <div
         css={css`
           position: relative;
@@ -75,7 +57,6 @@ export const Main: React.FC = () => {
       >
         <Banner />
         <Contents />
-        <BottomBar />
       </div>
     </React.Fragment>
   );
