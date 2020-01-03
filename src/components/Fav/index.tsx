@@ -15,9 +15,14 @@ export const FAV = styled.button`
   background: ${styles.YELLOW_100};
   border-radius: 100%;
 
-  transition-property: background-color;
+  transition-property: background-color, bottom, right;
 
   cursor: pointer;
+
+  ${styles.MEDIAQUERY_UNDER_R} {
+    bottom: 104px;
+    right: 24px;
+  }
 
   svg {
     ${styles.TRANSITION_SLOW};
