@@ -11,7 +11,7 @@ export const SideBarOnButton: React.FC = () => {
   return (
     <div
       css={css`
-        z-index: 10;
+        z-index: 5;
 
         ${styles.TRANSITION_SLOW}
         transition-property: left;
@@ -24,10 +24,6 @@ export const SideBarOnButton: React.FC = () => {
         background-color: ${styles.BROWN_100};
         width: 80px;
         height: 80px;
-
-        ${styles.MEDIAQUERY_OVER_R} {
-          left: -80px;
-        }
       `}
     >
       <CharacterProfileImage
