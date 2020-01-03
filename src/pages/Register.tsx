@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { jsx, css } from '@emotion/core';
+import { Link } from 'react-router-dom';
 import { Button } from '../components/Button';
 import { ButtonWrapper } from '../components/Button/ButtonWrapper';
 import { TextInput } from '../components/Input/TextInput';
@@ -18,15 +19,15 @@ export const Register: React.FC = () => {
   return (
     <React.Fragment>
       <ButtonWrapper position="top-left" padding="x-small">
-        <a href=".">
+        <Link to=".">
           <Button size="large">
             <icons.ArrowLeft />
           </Button>
-        </a>
+        </Link>
       </ButtonWrapper>
       <form
         css={css`
-          width: calc(100% - 2 * ${styles.SPACE_XXL});
+          width: calc(100% - 2 * ${styles.SPACE_L});
           max-width: 272px;
         `}
       >
