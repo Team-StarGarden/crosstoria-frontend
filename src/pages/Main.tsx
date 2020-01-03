@@ -7,13 +7,11 @@ import * as icons from '../assets/Icons';
 
 import * as styles from '../constants';
 import { FAV } from '../components/FAV';
-import { Button } from '../components/Button';
 import { SideBar } from '../components/SideBar';
 import { SideBarOnButton } from '../components/SideBar/SideBarOnButton';
 import BottomBar from '../components/BottomBar';
 import ResponsiveLogo from '../components/ResponsiveLogo';
-import ButtonWrapper from '../components/Button/ButtonWrapper';
-
+import { Thread } from '../components/Thread';
 export const Banner: React.FC = () => {
   return (
     <div
@@ -32,8 +30,32 @@ export const Banner: React.FC = () => {
   );
 };
 
+export const NewThreads: React.FC = ({ children }) => {
+  return (
+    <div
+      css={css`
+        ${styles.SUBTEXT_S}
+        padding: ${styles.SPACE_R};
+        
+        margin-top: ${styles.SPACE_XL};
+        background-color: black;
+        text-align: center;
+
+        /* color: ${styles.YELLOW_900}; */
+      `}
+    >
+      <span>새로운 역극이 {children}개 올라왔어요</span>
+    </div>
+  );
+};
+
 export const Contents: React.FC = () => {
-  return <React.Fragment></React.Fragment>;
+  return (
+    <div>
+      <NewThreads>3</NewThreads>
+      <Thread username="마타리" place="바다" time="16분전" contents="결혼식 이야기" goodCount={0} subThreadCount={2}  ></Thread>
+    </div>
+  );
 };
 
 export const Main: React.FC = () => {
@@ -42,14 +64,16 @@ export const Main: React.FC = () => {
       <SideBar />
       <SideBarOnButton />
       <BottomBar />
-      <FAV><icons.Write /></FAV>
+      <FAV>
+        <icons.Write />
+      </FAV>
       <div
         css={css`
           position: relative;
           ${styles.TRANSITION_SLOW}
           transition-property: margin-left;
           margin-left: 256px;
-
+          background-color: ${styles.BROWN_300};
           ${styles.MEDIAQUERY_UNDER_R} {
             margin-left: 0;
           }
