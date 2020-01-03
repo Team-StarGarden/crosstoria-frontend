@@ -53,11 +53,18 @@ export const Login: React.FC = () => {
   return (
     <form
       css={css`
-        width: calc(100% - 2 * ${styles.SPACE_XXL});
+        width: calc(100% - 2 * ${styles.SPACE_L});
         max-width: 272px;
       `}
     >
-      <ResponsiveLogo />
+      <ResponsiveLogo
+        css={css`
+          display: block;
+          width: calc(100vw - 2 * ${styles.SPACE_XXL});
+          max-width: 272px;
+          margin: 0 auto;
+        `}
+      />
       <TextInput id="" type="email" placeholder="email@example.com" />
       <TextInput id="" type="password" placeholder="＊＊＊＊＊＊＊＊" />
       <ForgotPasswordLink to="/lost-password">
