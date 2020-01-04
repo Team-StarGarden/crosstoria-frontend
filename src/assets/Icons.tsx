@@ -2,8 +2,8 @@
 import { jsx, css } from '@emotion/core';
 import React from 'react';
 
-export const Add: React.FC = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+export const Add: React.FC<React.SVGProps<SVGSVGElement>> = props => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
     <path d="M3.19 23H20.8c1.21 0 2.19-.98 2.19-2.19V3.19C23 1.98 22.02 1 20.81 1H3.19C1.98 1 1 1.98 1 3.19V20.8c0 1.22.98 2.2 2.19 2.2zm.89-20h15.83c.6 0 1.09.49 1.09 1.08v15.83c0 .6-.49 1.08-1.08 1.08H4.08C3.49 21 3 20.51 3 19.92V4.08C3 3.49 3.49 3 4.08 3z" />
     <path d="M12.23 6.5h-.46c-.43 0-.77.34-.77.77V11H7.27c-.43 0-.77.34-.77.77v.46c0 .43.34.77.77.77H11v3.73c0 .43.34.77.77.77h.46c.43 0 .77-.34.77-.77V13h3.73c.43 0 .77-.34.77-.77v-.46c0-.43-.34-.77-.77-.77H13V7.27c0-.43-.34-.77-.77-.77z" />
   </svg>
@@ -65,8 +65,8 @@ export const Log: React.FC = () => (
   </svg>
 );
 
-export const Message: React.FC = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+export const Message: React.FC<React.SVGProps<SVGSVGElement>> = props => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
     <path d="M0 3.92v16.17c0 .5.41.91.92.91h22.17c.51 0 .92-.41.92-.92V3.92a.933.933 0 00-.93-.92H.92C.41 3 0 3.41 0 3.92zM20.26 5l-7.58 5.3c-.41.28-.95.28-1.36 0L3.74 5h16.52zM2 18.24V6.22l9.26 6.48c.44.31 1.03.31 1.47 0L22 6.22v12.02c0 .42-.34.76-.76.76H2.76a.76.76 0 01-.76-.76z" />
   </svg>
 );
