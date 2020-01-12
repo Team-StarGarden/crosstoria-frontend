@@ -14,7 +14,7 @@ type CharacterProfileProps = {
   size: 'x-large' | 'large' | 'regular' | 'small' | 'x-small';
   /* 프로필의 링크를 설정합니다. */
   href?: string;
-}
+};
 
 const CharacterProfileStyle = css`
   ${styles.TRANSITION_SLOW}
@@ -24,7 +24,7 @@ const CharacterProfileStyle = css`
   position: relative;
 
   &:active.x-large {
-    filter: brightness(.5);
+    filter: brightness(0.5);
   }
 
   &.x-large {
@@ -73,8 +73,13 @@ const CharacterProfileHoverStyle = css`
   }
 `;
 
-export const CharacterProfile: React.FC<CharacterProfileProps> = ({src, size, href, ...props}) => {
-  if(href) {
+export const CharacterProfile: React.FC<CharacterProfileProps> = ({
+  src,
+  size,
+  href,
+  ...props
+}) => {
+  if (href) {
     return (
       <a href={href} css={CharacterProfileStyle} className={size} {...props}>
         <div css={CharacterProfileHoverStyle} />

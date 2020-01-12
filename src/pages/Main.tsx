@@ -53,7 +53,14 @@ export const Contents: React.FC = () => {
   return (
     <div>
       <NewThreads>3</NewThreads>
-      <Thread username="마타리" place="바다" time="16분전" contents="결혼식 이야기" goodCount={0} subThreadCount={2}  ></Thread>
+      <Thread
+        username="마타리"
+        place="바다"
+        time="16분전"
+        contents="결혼식 이야기"
+        goodCount={0}
+        subThreadCount={2}
+      ></Thread>
     </div>
   );
 };

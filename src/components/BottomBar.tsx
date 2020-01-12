@@ -45,7 +45,7 @@ export const BottomBar: React.FC = () => {
         padding: ${styles.SPACE_S} 0;
 
         height: 80px;
-        
+
         background: ${styles.BROWN_100};
 
         ${styles.MEDIAQUERY_OVER_R} {

@@ -3,7 +3,7 @@ import { jsx, css } from '@emotion/core';
 import * as styles from '../../constants';
 import { CharacterProfileImage } from '../CharacterProfile/CharacterProfileImage';
 
-const SideBarOnEvent = () => {
+const SideBarOnEvent = (): void => {
   document.body.classList.add('sidebar-opened');
 };
 
@@ -33,7 +33,8 @@ export const SideBarOnButton: React.FC = () => {
         additionalCSS={css`
           cursor: pointer;
 
-          &:focus, &:hover {
+          &:focus,
+          &:hover {
             filter: brightness(0.5);
           }
         `}

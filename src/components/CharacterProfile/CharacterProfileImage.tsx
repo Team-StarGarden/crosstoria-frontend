@@ -68,7 +68,9 @@ export const CharacterProfileImage: React.FC<CharacterProfileImageProps &
   return (
     <img
       src={src}
-      css={css`${CharacterProfileImageStyle} ${additionalCSS}`}
+      css={css`
+        ${CharacterProfileImageStyle} ${additionalCSS}
+      `}
       className={size}
       onClick={onClick}
       {...props}

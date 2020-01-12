@@ -34,9 +34,9 @@ export const PageHint: React.FC = () => {
   return (
     <div
       css={css`
-      margin: 0 auto;
-      text-align: center;
-    `}
+        margin: 0 auto;
+        text-align: center;
+      `}
     >
       <h1
         css={css`
@@ -67,14 +67,20 @@ export const LostPassword: React.FC = () => {
           </Button>
         </Link>
       </ButtonWrapper>
-      
-      <form css={css`width: calc(100% - 2 * ${styles.SPACE_L});`}>
+
+      <form
+        css={css`
+          width: calc(100% - 2 * ${styles.SPACE_L});
+        `}
+      >
         <PageHint />
-        <div css={css`
-          width: 100%;
-          max-width: 272px;
-          margin: 0 auto;
-        `}>
+        <div
+          css={css`
+            width: 100%;
+            max-width: 272px;
+            margin: 0 auto;
+          `}
+        >
           <TextInput
             id=""
             type="email"

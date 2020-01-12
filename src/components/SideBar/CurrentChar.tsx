@@ -20,7 +20,7 @@ type CurrentCharProps = {
 
 /* 모바일일 경우, 펼쳐진 sidebar를 닫는 함수입니다. */
 
-const sidebarCloseEvent = () => {
+const sidebarCloseEvent = (): void => {
   document.body.classList.remove('sidebar-opened');
 };
 

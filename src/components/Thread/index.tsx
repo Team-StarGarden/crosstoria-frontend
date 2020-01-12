@@ -26,21 +26,21 @@ export const EndThead: React.FC<EndTheadProps> = ({
   subThreadCount,
 }) => {
   return (
-    <div css={
-      css`
-      background: black;
-      `
-    }>
+    <div
+      css={css`
+        background: black;
+      `}
+    >
       <Button size="small">
-        <icons.Add/>
-       <span> 역할극 잇기</span>
+        <icons.Add />
+        <span> 역할극 잇기</span>
       </Button>
       <Button size="small">
-        <icons.Message/>
+        <icons.Message />
         {subThreadCount}
       </Button>
       <Button size="small">
-        <icons.Heart/>
+        <icons.Heart />
         {goodCount}
       </Button>
     </div>
