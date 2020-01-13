@@ -16,6 +16,7 @@ type ThreadInfoProps = {
   contents: string;
   goodCount: number;
   subThreadCount: number;
+  profileIMG:string;
 };
 type EndTheadProps = {
   goodCount: number;
@@ -26,23 +27,43 @@ export const EndThead: React.FC<EndTheadProps> = ({
   subThreadCount,
 }) => {
   return (
-    <div css={
-      css`
-      background: black;
-      `
-    }>
-      <Button size="small">
-        <icons.Add/>
-       <span> 역할극 잇기</span>
+    <div
+      css={css`
+        padding-top: ${styles.SPACE_L};
+        background: black;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        height: 30px;
+      `}
+    >
+      <Button
+        size="small"
+        css={css`
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        `}
+      >
+        <icons.Add />
+        <span> 역할극 잇기</span>
       </Button>
-      <Button size="small">
-        <icons.Message/>
-        {subThreadCount}
-      </Button>
-      <Button size="small">
-        <icons.Heart/>
-        {goodCount}
-      </Button>
+      <div
+        css={css`
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        `}
+      >
+        <Button size="small">
+          <icons.Message />
+          {subThreadCount}
+        </Button>
+        <Button size="small">
+          <icons.Heart />
+          {goodCount}
+        </Button>
+      </div>
     </div>
   );
 };
@@ -54,16 +75,21 @@ export const Thread: React.FC<ThreadInfoProps> = ({
   contents,
   goodCount,
   subThreadCount,
+  profileIMG
 }) => {
   return (
-    <div>
-      <MainThread username={username} time={time} place={place}>
+    <div >
+      <MainThread
+        profilePath={profileIMG}
+        username={username}
+        time={time}
+        place={place}
+      >
         {contents}
       </MainThread>
-      {/* TODO: input subThreadList */}
+      {children}
       <EndThead goodCount={goodCount} subThreadCount={subThreadCount} />
     </div>
   );
 };
-
 export default Thread;

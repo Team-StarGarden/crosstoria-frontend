@@ -12,6 +12,7 @@ import { SideBarOnButton } from '../components/SideBar/SideBarOnButton';
 import BottomBar from '../components/BottomBar';
 import ResponsiveLogo from '../components/ResponsiveLogo';
 import { Thread } from '../components/Thread';
+import { SubThread } from '../components/Thread/SubThread';
 export const Banner: React.FC = () => {
   return (
     <div
@@ -53,7 +54,23 @@ export const Contents: React.FC = () => {
   return (
     <div>
       <NewThreads>3</NewThreads>
-      <Thread username="마타리" place="바다" time="16분전" contents="결혼식 이야기" goodCount={0} subThreadCount={2}  ></Thread>
+      <Thread
+        username="마타리"
+        place="바다"
+        time="16분전"
+        contents="결혼식 이야기"
+        goodCount={0}
+        profileIMG="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC"
+        subThreadCount={2}
+      >
+        <SubThread
+          username="쿠르"
+          place="바다"
+          time="14분전"
+          profileIMG="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC"
+          contents="..... 결혼식?"
+        ></SubThread>
+      </Thread>
     </div>
   );
 };

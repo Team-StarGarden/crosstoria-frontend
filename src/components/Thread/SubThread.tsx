@@ -1,5 +1,4 @@
 /** @jsx jsx */
-
 import React from 'react';
 import { jsx, css } from '@emotion/core';
 
@@ -8,28 +7,30 @@ import { ThreadHeader } from './ThreadHeader';
 
 type ThreadInfoProps = {
   username: string;
-  place: string;
+  place: string|null;
   time: string;
-  profilePath: string;
+  profileIMG: string;
+  contents: string;
 };
 
-export const MainThread: React.FC<ThreadInfoProps> = ({
+export const SubThread: React.FC<ThreadInfoProps> = ({
   children,
   username,
   time,
+  contents,
   place,
-  profilePath,
+  profileIMG,
 }) => {
   return (
     <div
-      css={css`
-        margin-top: ${styles.SPACE_R};
-        padding: ${styles.SPACE_R} ${styles.SPACE_R} 0 ${styles.SPACE_R};
-        background-color: black;
-      `}
+    css={
+      css`
+       padding: ${styles.SPACE_L} ${styles.SPACE_L} 0 ${styles.SPACE_L};
+      `
+    }
     >
       <img
-        src={profilePath}
+        src={profileIMG}
         alt="profile IMG"
         css={css`
           vertical-align: top;
@@ -45,18 +46,17 @@ export const MainThread: React.FC<ThreadInfoProps> = ({
           display: inline-block;
         `}
       >
-        <ThreadHeader username={username} place={place} time={time} />
-        {/* Thrend Contents */}
+        <ThreadHeader username={username} place={null} time={time} />
         <div
           css={css`
             ${styles.TEXT_R};
             color: ${styles.YELLOW_500};
           `}
         >
-          {children}
+          {contents}
         </div>
       </div>
     </div>
   );
 };
-export default MainThread;
+export default SubThread;
