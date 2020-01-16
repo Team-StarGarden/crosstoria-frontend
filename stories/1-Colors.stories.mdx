@@ -1,0 +1,39 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+import * as styles from '../src/constants';
+
+<Meta title="Crosstoria/Colors" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem
+    title="constants.YELLOW_100, 500, 900"
+    subtitle="Yellow"
+    colors={[styles.YELLOW_100, styles.YELLOW_500, styles.YELLOW_900]}
+  />
+  <ColorItem
+    title="constants.BROWN_100, 300, 500"
+    subtitle="Brown"
+    colors={[styles.BROWN_100, styles.BROWN_300, styles.BROWN_500]}
+  />
+  <ColorItem
+    title="constants.RED_500"
+    subtitle="Red"
+    colors={[styles.RED_500]}
+  />
+  <ColorItem
+    title="constants.TURQUOISE_500"
+    subtitle="Turquoise"
+    colors={[styles.TURQUOISE_500]}
+  />
+  <ColorItem
+    title="constants.WHITE_100"
+    subtitle="White"
+    colors={[styles.WHITE_100]}
+  />
+  <ColorItem
+    title="constants.BLUE_700"
+    subtitle="Blue"
+    colors={[styles.BLUE_700]}
+  />
+</ColorPalette>
