@@ -17,19 +17,20 @@ jobs:
       run: npm install -g yarn
     - name: load dependencies
       run: yarn install
-    - name: build engine
-      run: yarn build
-      env:
-        PUBLIC_URL: https://team-stargarden.github.io/crosstoria-frontend/ 
+#    - name: build engine
+#      run: yarn build
+#      env:
+#        PUBLIC_URL: https://team-stargarden.github.io/crosstoria-frontend/ 
     - name: build storybook
       run: yarn build-storybook
     - name: create gh-pages
       run: mkdir gh-pages
-    - name: move react build for deployment
-      run: |
-        mv build/* gh-pages/
+#    - name: move react build for deployment
+#      run: |
+#        mv build/* gh-pages/
     - name: move storybook for deployment
-      run: cp -r storybook-static gh-pages/storybook
+      run: cp -r storybook-static/* gh-pages/
+#      run: cp -r storybook-static gh-pages/storybook
     - name: GitHub Pages Deploy
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
