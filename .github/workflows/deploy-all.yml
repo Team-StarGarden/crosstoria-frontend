@@ -23,23 +23,21 @@ jobs:
         PUBLIC_URL: https://team-stargarden.github.io/crosstoria-frontend/ 
     - name: build storybook
       run: yarn build-storybook
-    - name: cleanup
-      run: |
-        rm -r public
-        mkdir public
+    - name: create gh-pages
+      run: mkdir gh-pages
     - name: move react build for deployment
       run: |
-        mv build/* public/
-        cp -r public/static/* public/
+        mv build/* gh-pages/
+        cp -r public/static/* gh-pages/
     - name: move storybook for deployment
-      run: mv storybook-static public/storybook
+      run: cp -r storybook-static public/storybook
     - name: GitHub Pages Deploy
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
       with:
         target_branch: gh-pages
-        build_dir: public
-        keep_history: true 
+        build_dir: gh-pages
+        keep_history: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
