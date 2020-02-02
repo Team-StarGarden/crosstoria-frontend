@@ -20,7 +20,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint \"src/**/*.{tsx,ts}\"",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "eslint-fix": "eslint \"src/**/*.{tsx,ts}\" --fix"
   },
   "browserslist": {
     "production": [

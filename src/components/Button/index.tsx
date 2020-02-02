@@ -14,7 +14,7 @@ type ButtonProps = {
   /* 버튼의 너비를 임의로 설정합니다. */
   width?: string | number;
   /* 클릭해서 발생하는 이벤트가 있다면, 해당 props를 사용합니다. */
-  onClick? : () => void;
+  onClick?: () => void;
 };
 
 const Common = css`

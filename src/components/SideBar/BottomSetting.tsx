@@ -13,7 +13,7 @@ export const BottomSetting: React.FC = () => {
       css={css`
         ${styles.TRANSITION_SLOW}
         transition-property: left;
-        
+
         position: fixed;
         left: 0;
         bottom: 0;

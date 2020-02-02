@@ -7,7 +7,7 @@ import * as styles from '../../constants';
 
 type ThreadHeaderProps = {
   username: string;
-  place: string|null;
+  place: string | null;
   time: string;
 };
 export const ThreadHeader: React.FC<ThreadHeaderProps> = ({

@@ -16,7 +16,7 @@ type ThreadInfoProps = {
   contents: string;
   goodCount: number;
   subThreadCount: number;
-  profileIMG:string;
+  profileIMG: string;
 };
 type EndTheadProps = {
   goodCount: number;
@@ -75,10 +75,10 @@ export const Thread: React.FC<ThreadInfoProps> = ({
   contents,
   goodCount,
   subThreadCount,
-  profileIMG
+  profileIMG,
 }) => {
   return (
-    <div >
+    <div>
       <MainThread
         profilePath={profileIMG}
         username={username}
