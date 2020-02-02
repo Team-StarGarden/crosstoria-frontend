@@ -6,7 +6,7 @@ import { jsx, css } from '@emotion/core';
 import * as icons from '../assets/Icons';
 
 import * as styles from '../constants';
-import { FAV } from '../components/FAV';
+import { FAV } from '../components/Fav';
 import { SideBar } from '../components/SideBar';
 import { SideBarOnButton } from '../components/SideBar/SideBarOnButton';
 import BottomBar from '../components/BottomBar';
