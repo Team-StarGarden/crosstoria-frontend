@@ -1,0 +1,22 @@
+name: test
+
+on: [push]
+
+jobs:
+  build:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+        registry-url: 'https://registry.npmjs.org'
+    - name: install yarn
+      run: npm install -g yarn
+    - name: load dependencies
+      run: yarn install
+    - name: linting test
+      run: yarn lint
+      
