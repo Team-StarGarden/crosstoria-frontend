@@ -19,6 +19,8 @@ jobs:
       run: yarn install
     - name: build engine
       run: yarn build
+      env:
+        PUBLIC_URL: https://team-stargarden.github.io/crosstoria-frontend/ 
     - name: build storybook
       run: yarn build-storybook
     - name: cleanup
