@@ -28,9 +28,8 @@ jobs:
     - name: move react build for deployment
       run: |
         mv build/* gh-pages/
-        cp -r public/static/* gh-pages/
     - name: move storybook for deployment
-      run: cp -r storybook-static public/storybook
+      run: cp -r storybook-static gh-pages/storybook
     - name: GitHub Pages Deploy
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
