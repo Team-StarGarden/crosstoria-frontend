@@ -28,7 +28,9 @@ jobs:
         rm -r public
         mkdir public
     - name: move react build for deployment
-      run: mv build/* public/
+      run: |
+        mv build/* public/
+        cp -r public/static/* public/
     - name: move storybook for deployment
       run: mv storybook-static public/storybook
     - name: GitHub Pages Deploy
