@@ -1,0 +1,19 @@
+name: deploy-storybook
+
+on: [push]
+
+jobs:
+  build:
+    
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: get nodeJS and npm
+      run: apt install -y nodejs npm
+    - name: install yarn
+      run: npm install -g yarn
+    - name: load dependencies
+      run: yarn install
+    - name: build storybook
+      run: yarn build-storybook
