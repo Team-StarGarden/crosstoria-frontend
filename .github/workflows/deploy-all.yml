@@ -1,4 +1,4 @@
-name: deploy-storybook
+name: deploy-all
 
 on: [push]
 
@@ -17,8 +17,18 @@ jobs:
       run: npm install -g yarn
     - name: load dependencies
       run: yarn install
+    - name: build engine
+      run: yarn build
     - name: build storybook
       run: yarn build-storybook
+    - name: cleanup
+      run: |
+        rm -r public
+        mkdir public
+    - name: move react build for deployment
+      run: mv build/* public/
+    - name: move storybook for deployment
+      run: mv storybook-static public/storybook
     - name: GitHub Pages Deploy
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
