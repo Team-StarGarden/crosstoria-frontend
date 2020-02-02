@@ -9,8 +9,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: get nodeJS and npm
-      run: apt install -y nodejs npm
+    - uses: actions/setup-node
+      with:
+        node-version: '10.x'
+        registry-url: 'https://registry.npmjs.org'
     - name: install yarn
       run: npm install -g yarn
     - name: load dependencies
