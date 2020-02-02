@@ -23,8 +23,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# crosstoria specific
-/src/assets/bg_worldmap.jpg
-/src/assets/bg_townmap.jpg
-/src/assets/logo_withtypo.png
-/src/assets/logo.png
