@@ -33,7 +33,8 @@ export const SideBarOnButton: React.FC = () => {
         additionalCSS={css`
           cursor: pointer;
 
-          &:focus, &:hover {
+          &:focus,
+          &:hover {
             filter: brightness(0.5);
           }
         `}

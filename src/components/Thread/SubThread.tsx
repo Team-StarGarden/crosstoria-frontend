@@ -7,7 +7,7 @@ import { ThreadHeader } from './ThreadHeader';
 
 type ThreadInfoProps = {
   username: string;
-  place: string|null;
+  place: string | null;
   time: string;
   profileIMG: string;
   contents: string;
@@ -23,11 +23,9 @@ export const SubThread: React.FC<ThreadInfoProps> = ({
 }) => {
   return (
     <div
-    css={
-      css`
-       padding: ${styles.SPACE_L} ${styles.SPACE_L} 0 ${styles.SPACE_L};
-      `
-    }
+      css={css`
+        padding: ${styles.SPACE_L} ${styles.SPACE_L} 0 ${styles.SPACE_L};
+      `}
     >
       <img
         src={profileIMG}

@@ -62,11 +62,14 @@ export const SideBar: React.FC = () => {
   return (
     <div css={SideBarWrapperStyle}>
       <div css={SideBarStyle}>
-        <CurrentChar characterName="캐릭터의 이름" characterJob="캐릭터의 직업" />
-          <div css={SideBarMenuWrapperStyle}>
-            <HashTagList />
-            <PlaceNav />
-          </div>
+        <CurrentChar
+          characterName="캐릭터의 이름"
+          characterJob="캐릭터의 직업"
+        />
+        <div css={SideBarMenuWrapperStyle}>
+          <HashTagList />
+          <PlaceNav />
+        </div>
         <BottomSetting />
       </div>
     </div>
