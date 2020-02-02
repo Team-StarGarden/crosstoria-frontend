@@ -19,3 +19,8 @@ jobs:
       run: yarn install
     - name: build storybook
       run: yarn build-storybook
+    - name: Deploy to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v1.2.5
+      with:
+        # Build directory to deploy
+        build_dir: public/
