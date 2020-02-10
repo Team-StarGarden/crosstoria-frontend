@@ -13,10 +13,10 @@ type ThreadHeaderProps = {
 export const ThreadHeader: React.FC<ThreadHeaderProps> = ({
   username,
   place,
-  time,
+  time,...props
 }) => {
   return (
-    <div>
+    <div {...props}>
       <span
         css={css`
           ${styles.TEXT_L};

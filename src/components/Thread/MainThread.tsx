@@ -4,7 +4,9 @@ import React from 'react';
 import { jsx, css } from '@emotion/core';
 
 import * as styles from '../../constants';
+import * as icons from '../../assets/Icons';
 import { ThreadHeader } from './ThreadHeader';
+import { Button } from '../Button';
 
 type ThreadInfoProps = {
   username: string;
@@ -23,17 +25,18 @@ export const MainThread: React.FC<ThreadInfoProps> = ({
   return (
     <div
       css={css`
+        display: flex;
         ${styles.TEXT_R};
         color: ${styles.YELLOW_500};
-        padding: ${styles.SPACE_R};
+        padding: 0 ${styles.SPACE_S} ${styles.SPACE_R} ${styles.SPACE_R};
       `}
     >
       <img
         src={profilePath}
         alt="profile IMG"
         css={css`
+          margin-top: ${styles.SPACE_R};
           vertical-align: top;
-          display: inline-block;
           border-radius: 50%;
           height: 100px;
           width: 100px;
@@ -42,13 +45,21 @@ export const MainThread: React.FC<ThreadInfoProps> = ({
       />
       <div
         css={css`
-          display: inline-block;
+          margin-top: ${styles.SPACE_R};
         `}
       >
         <ThreadHeader username={username} place={place} time={time} />
         {/* Thrend Contents */}
-        <div>{children}</div>
+        {children}
       </div>
+      <Button
+        size="regular"
+        css={css`
+          margin-left: auto;
+        `}
+      >
+        <icons.ArrowDown />
+      </Button>
     </div>
   );
 };
