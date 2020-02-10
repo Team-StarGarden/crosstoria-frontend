@@ -29,8 +29,7 @@ jobs:
       run: |
         mv build/* gh-pages/
     - name: move storybook for deployment
-      run: cp -r storybook-build/* gh-pages
-#      run: cp -r storybook-build gh-pages/storybook
+      run: cp -r storybook-build gh-pages/storybook
     - name: GitHub Pages Deploy
       if: success()
       uses: crazy-max/ghaction-github-pages@v1
