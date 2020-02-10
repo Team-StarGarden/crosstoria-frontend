@@ -23,9 +23,9 @@ export const MainThread: React.FC<ThreadInfoProps> = ({
   return (
     <div
       css={css`
-        margin-top: ${styles.SPACE_R};
-        padding: ${styles.SPACE_R} ${styles.SPACE_R} 0 ${styles.SPACE_R};
-        background-color: black;
+        ${styles.TEXT_R};
+        color: ${styles.YELLOW_500};
+        padding: ${styles.SPACE_R};
       `}
     >
       <img
@@ -47,14 +47,7 @@ export const MainThread: React.FC<ThreadInfoProps> = ({
       >
         <ThreadHeader username={username} place={place} time={time} />
         {/* Thrend Contents */}
-        <div
-          css={css`
-            ${styles.TEXT_R};
-            color: ${styles.YELLOW_500};
-          `}
-        >
-          {children}
-        </div>
+        <div>{children}</div>
       </div>
     </div>
   );

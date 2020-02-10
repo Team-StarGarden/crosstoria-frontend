@@ -4,8 +4,6 @@ import React from 'react';
 import { jsx, css } from '@emotion/core';
 
 import * as styles from '../../constants';
-import * as icons from '../../assets/Icons';
-import { Button } from '../../components/Button';
 
 import MainThread from './MainThread';
 import EndThead from './EndThread';
@@ -31,7 +29,12 @@ export const Thread: React.FC<ThreadInfoProps> = ({
   profileIMG,
 }) => {
   return (
-    <div>
+    <div
+      css={css`
+        margin-top: ${styles.SPACE_R};
+        background: black;
+      `}
+    >
       <MainThread
         profilePath={profileIMG}
         username={username}
