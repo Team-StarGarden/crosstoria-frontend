@@ -42,7 +42,7 @@ jobs:
       with:
         target_branch: gh-pages
         build_dir: gh-pages
-        keep_history: false
+        keep_history: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
