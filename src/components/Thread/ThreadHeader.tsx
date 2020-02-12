@@ -13,7 +13,8 @@ type ThreadHeaderProps = {
 export const ThreadHeader: React.FC<ThreadHeaderProps> = ({
   username,
   place,
-  time,...props
+  time,
+  ...props
 }) => {
   return (
     <div {...props}>
