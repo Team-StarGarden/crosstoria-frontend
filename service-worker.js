@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://team-stargarden.github.io/crosstoria-frontend/precache-manifest.588689db2271cfd9db5bb4849df64c1b.js"
+  "https://team-stargarden.github.io/crosstoria-frontend/precache-manifest.7a0ef4b3613ae5dae0ac261df1529260.js"
 );
 
 self.addEventListener('message', (event) => {
