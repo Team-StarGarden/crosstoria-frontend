@@ -11,7 +11,7 @@ type EndTheadProps = {
   subThreadCount: number;
 };
 
-export const EndThead: React.FC<EndTheadProps> = ({
+export const EndThread: React.FC<EndTheadProps> = ({
   goodCount,
   subThreadCount,
 }) => {
@@ -45,4 +45,4 @@ export const EndThead: React.FC<EndTheadProps> = ({
     </div>
   );
 };
-export default EndThead;
+export default EndThread;

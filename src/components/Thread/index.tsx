@@ -6,7 +6,7 @@ import { jsx, css } from '@emotion/core';
 import * as styles from '../../constants';
 
 import MainThread from './MainThread';
-import EndThead from './EndThread';
+import EndThread from './EndThread';
 
 type ThreadInfoProps = {
   username: string;
@@ -44,7 +44,7 @@ export const Thread: React.FC<ThreadInfoProps> = ({
         {contents}
       </MainThread>
       {children}
-      <EndThead goodCount={goodCount} subThreadCount={subThreadCount} />
+      <EndThread goodCount={goodCount} subThreadCount={subThreadCount} />
     </div>
   );
 };
