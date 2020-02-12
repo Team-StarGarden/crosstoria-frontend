@@ -9,7 +9,7 @@
 - `yarn lint` - 코드 상의 문제점을 Linting합니다.
 - `yarn storybook` - 컴포넌트와 특성들을 정리해둔 storybook 을 로컬로 서버에 엽니다.
 - `yarn build-storybook` - 위에 명시한 storybook을 빌드합니다.
-- `yarn fix-eslint` - 코드 상의 문제점 중 자동으로 해결할 수 있는 사항에 대해 자동으로 수정합니다. 에러로 인해 커밋이 불가하다면, 이 명령어를 사용하세요.
+- `yarn fix-lint` - 코드 상의 문제점 중 자동으로 해결할 수 있는 사항에 대해 자동으로 수정합니다. 에러로 인해 커밋이 불가하다면, 이 명령어를 사용하세요.
 
 ## License
 

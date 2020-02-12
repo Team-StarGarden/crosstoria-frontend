@@ -21,7 +21,7 @@
         "lint": "eslint \"src/**/*.{tsx,ts}\"",
         "storybook": "start-storybook -p 9009",
         "build-storybook": "build-storybook -c .storybook -o storybook-build",
-        "fix-eslint": "eslint \"src/**/*.{tsx,ts}\" --fix"
+        "fix-lint": "eslint \"src/**/*.{tsx,ts}\" --fix"
     },
     "browserslist": {
         "production": [
