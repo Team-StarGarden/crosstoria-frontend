@@ -4,6 +4,7 @@ import { jsx, css } from '@emotion/core';
 
 import * as styles from '../../constants';
 import { ThreadHeader } from './ThreadHeader';
+import { CharacterProfile } from '../CharacterProfile';
 
 type ThreadInfoProps = {
   username: string;
@@ -11,15 +12,16 @@ type ThreadInfoProps = {
   time: string;
   profileIMG: string;
   contents: string;
+  childThreadCount: number;
 };
 
 export const SubThread: React.FC<ThreadInfoProps> = ({
-  children,
   username,
   time,
   contents,
   place,
   profileIMG,
+  childThreadCount,
 }) => {
   return (
     <div
@@ -35,18 +37,15 @@ export const SubThread: React.FC<ThreadInfoProps> = ({
           padding: ${styles.SPACE_R} 0 ${styles.SPACE_R} ${styles.SPACE_XL};
         `}
       >
-        <img
-          src={profileIMG}
-          alt="profile IMG"
+        <div
           css={css`
             vertical-align: top;
             display: inline-block;
-            border-radius: 50%;
-            height: 80px;
-            width: 80px;
             margin-right: 30px;
           `}
-        />
+        >
+          <CharacterProfile size="regular" href="" src={profileIMG} />
+        </div>
         <div
           css={css`
             display: inline-block;
@@ -71,7 +70,7 @@ export const SubThread: React.FC<ThreadInfoProps> = ({
             margin-bottom: auto;
           `}
         >
-          +3
+          {childThreadCount < 1 ? '' : '+' + childThreadCount}
         </p>
       </div>
     </div>

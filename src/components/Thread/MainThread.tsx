@@ -7,6 +7,7 @@ import * as styles from '../../constants';
 import * as icons from '../../assets/Icons';
 import { ThreadHeader } from './ThreadHeader';
 import { Button } from '../Button';
+import { CharacterProfile } from '../CharacterProfile';
 
 type ThreadInfoProps = {
   username: string;
@@ -31,18 +32,15 @@ export const MainThread: React.FC<ThreadInfoProps> = ({
         padding: 0 ${styles.SPACE_S} ${styles.SPACE_R} ${styles.SPACE_R};
       `}
     >
-      <img
-        src={profilePath}
-        alt="profile IMG"
+      <div
         css={css`
-          margin-top: ${styles.SPACE_R};
           vertical-align: top;
-          border-radius: 50%;
-          height: 100px;
-          width: 100px;
           margin-right: 30px;
+          margin-top: ${styles.SPACE_R};
         `}
-      />
+      >
+        <CharacterProfile size="large" href="" src={profilePath} />
+      </div>
       <div
         css={css`
           margin-top: ${styles.SPACE_R};

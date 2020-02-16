@@ -76,6 +76,9 @@ export const Default = (): React.ReactNode => {
   /* 쓰레드의 내용을 정의합니다 */
   const subThreadContents = text('subThread_contents', '결혼식 이야기');
 
+  /* 쓰레드의 서브쓰레드의 갯수를 정의합니다*/
+  const childThreadCount = number('subCount', 3);
+
   return (
     <div css={Background}>
       <Thread
@@ -96,6 +99,7 @@ export const Default = (): React.ReactNode => {
             place: subThreadPlace,
             profileIMG: subThreadProfileIMG,
             contents: subThreadContents,
+            childThreadCount: childThreadCount,
           }}
         ></SubThread>
       </Thread>
@@ -162,6 +166,9 @@ export const SubThreadDemo = (): React.ReactNode => {
   /* 쓰레드의 내용을 정의합니다 */
   const contents = text('contents', '결혼식 이야기');
 
+  /* 쓰레드의 서브쓰레드 갯수를 정의합니다*/
+  const childThreadCount = number('subCount', 3);
+
   return (
     <div css={Background}>
       <SubThread
@@ -171,6 +178,7 @@ export const SubThreadDemo = (): React.ReactNode => {
           place,
           profileIMG,
           contents,
+          childThreadCount,
         }}
       />
     </div>

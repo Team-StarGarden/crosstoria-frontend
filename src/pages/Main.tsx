@@ -55,6 +55,7 @@ export const Contents: React.FC = () => {
           time="14분전"
           profileIMG="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC"
           contents="..... 결혼식?"
+          childThreadCount={3}
         ></SubThread>
       </Thread>
     </div>
