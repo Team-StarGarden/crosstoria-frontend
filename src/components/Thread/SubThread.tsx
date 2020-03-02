@@ -5,21 +5,22 @@ import { jsx, css } from '@emotion/core';
 import * as styles from '../../constants';
 import { ThreadHeader } from './ThreadHeader';
 import { CharacterProfile } from '../CharacterProfile';
-import { Character } from '../../utils/Character';
 
 type ThreadInfoProps = {
-  character: Character;
+  username: string;
   place: string | null;
   time: string;
+  profileIMG: string;
   contents: string;
   childThreadCount: number;
 };
 
 export const SubThread: React.FC<ThreadInfoProps> = ({
-  character: { profileIMG, displayName },
+  username,
   time,
   contents,
   place,
+  profileIMG,
   childThreadCount,
 }) => {
   return (
@@ -50,7 +51,7 @@ export const SubThread: React.FC<ThreadInfoProps> = ({
             display: inline-block;
           `}
         >
-          <ThreadHeader displayName={displayName} place={null} time={time} />
+          <ThreadHeader username={username} place={null} time={time} />
           <div>{contents}</div>
         </div>
       </div>

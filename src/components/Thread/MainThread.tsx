@@ -10,7 +10,7 @@ import { Button } from '../Button';
 import { CharacterProfile } from '../CharacterProfile';
 
 type ThreadInfoProps = {
-  displayName: string;
+  username: string;
   place: string;
   time: string;
   profilePath: string;
@@ -18,7 +18,7 @@ type ThreadInfoProps = {
 
 export const MainThread: React.FC<ThreadInfoProps> = ({
   children,
-  displayName,
+  username,
   time,
   place,
   profilePath,
@@ -46,7 +46,7 @@ export const MainThread: React.FC<ThreadInfoProps> = ({
           margin-top: ${styles.SPACE_R};
         `}
       >
-        <ThreadHeader displayName={displayName} place={place} time={time} />
+        <ThreadHeader username={username} place={place} time={time} />
         {/* Thrend Contents */}
         {children}
       </div>
