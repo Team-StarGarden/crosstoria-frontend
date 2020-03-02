@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "https://team-stargarden.github.io/crosstoria-frontend/static/css/main.842b75fd.chunk.css",
-    "main.js": "https://team-stargarden.github.io/crosstoria-frontend/static/js/main.03a7f6c2.chunk.js",
-    "main.js.map": "https://team-stargarden.github.io/crosstoria-frontend/static/js/main.03a7f6c2.chunk.js.map",
+    "main.js": "https://team-stargarden.github.io/crosstoria-frontend/static/js/main.03ad0e07.chunk.js",
+    "main.js.map": "https://team-stargarden.github.io/crosstoria-frontend/static/js/main.03ad0e07.chunk.js.map",
     "runtime-main.js": "https://team-stargarden.github.io/crosstoria-frontend/static/js/runtime-main.c927cf0a.js",
     "runtime-main.js.map": "https://team-stargarden.github.io/crosstoria-frontend/static/js/runtime-main.c927cf0a.js.map",
     "static/js/2.5b932a64.chunk.js": "https://team-stargarden.github.io/crosstoria-frontend/static/js/2.5b932a64.chunk.js",
     "static/js/2.5b932a64.chunk.js.map": "https://team-stargarden.github.io/crosstoria-frontend/static/js/2.5b932a64.chunk.js.map",
     "index.html": "https://team-stargarden.github.io/crosstoria-frontend/index.html",
-    "precache-manifest.46c3fd08f0f77086dcde4a78e1aab8ce.js": "https://team-stargarden.github.io/crosstoria-frontend/precache-manifest.46c3fd08f0f77086dcde4a78e1aab8ce.js",
+    "precache-manifest.54f2be374d40544531e0297ac900bc2f.js": "https://team-stargarden.github.io/crosstoria-frontend/precache-manifest.54f2be374d40544531e0297ac900bc2f.js",
     "service-worker.js": "https://team-stargarden.github.io/crosstoria-frontend/service-worker.js",
     "static/css/main.842b75fd.chunk.css.map": "https://team-stargarden.github.io/crosstoria-frontend/static/css/main.842b75fd.chunk.css.map",
     "static/js/2.5b932a64.chunk.js.LICENSE": "https://team-stargarden.github.io/crosstoria-frontend/static/js/2.5b932a64.chunk.js.LICENSE",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.c927cf0a.js",
     "static/js/2.5b932a64.chunk.js",
     "static/css/main.842b75fd.chunk.css",
-    "static/js/main.03a7f6c2.chunk.js"
+    "static/js/main.03ad0e07.chunk.js"
   ]
 }
