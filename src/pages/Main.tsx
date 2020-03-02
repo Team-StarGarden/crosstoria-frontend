@@ -33,6 +33,9 @@ export const Banner: React.FC = () => {
 };
 
 export const Contents: React.FC = () => {
+  const blankImage =
+    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC';
+
   return (
     <div
       css={css`
@@ -41,23 +44,47 @@ export const Contents: React.FC = () => {
     >
       <NewThreads>3</NewThreads>
       <Thread
-        username="마타리"
-        place="바다"
-        time="16분전"
-        contents="결혼식 이야기"
-        goodCount={0}
-        profileIMG="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC"
-        subThreadCount={2}
-      >
-        <SubThread
-          username="쿠르"
-          place="바다"
-          time="14분전"
-          profileIMG="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAA1BMVEX///+nxBvIAAAASElEQVR4nO3BgQAAAADDoPlTX+AIVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwDcaiAAFXD1ujAAAAAElFTkSuQmCC"
-          contents="..... 결혼식?"
-          childThreadCount={3}
-        ></SubThread>
-      </Thread>
+        threadInfo={{
+          id: 0,
+          character: {
+            id: 0,
+            displayName: '쿠르',
+            profileIMG: blankImage,
+          },
+          place: '바다',
+          time: '4분 전',
+          contents: '..... 결혼식?',
+          likeCount: 0,
+          subThreads: [
+            {
+              id: 1,
+              character: {
+                id: 0,
+                displayName: '쿠르',
+                profileIMG: blankImage,
+              },
+              place: '바다',
+              time: '4분 전',
+              contents: '..... 결혼식?',
+              likeCount: 0,
+              subThreads: [],
+            },
+            {
+              id: 2,
+              character: {
+                id: 0,
+                displayName: '???',
+                profileIMG: blankImage,
+              },
+              place: '바다',
+              time: '4분 전',
+              contents: 'Not enough 축의금',
+              likeCount: 0,
+              subThreads: [],
+            },
+          ],
+        }}
+      />
     </div>
   );
 };

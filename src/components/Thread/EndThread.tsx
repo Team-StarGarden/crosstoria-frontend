@@ -7,12 +7,12 @@ import * as icons from '../../assets/Icons';
 import { Button } from '../../components/Button';
 
 type EndTheadProps = {
-  goodCount: number;
+  likeCount: number;
   subThreadCount: number;
 };
 
 export const EndThread: React.FC<EndTheadProps> = ({
-  goodCount,
+  likeCount,
   subThreadCount,
 }) => {
   return (
@@ -39,7 +39,7 @@ export const EndThread: React.FC<EndTheadProps> = ({
         </Button>
         <Button size="small">
           <icons.Heart />
-          {goodCount}
+          {likeCount}
         </Button>
       </div>
     </div>

@@ -6,12 +6,12 @@ import { jsx, css } from '@emotion/core';
 import * as styles from '../../constants';
 
 type ThreadHeaderProps = {
-  username: string;
+  displayName: string;
   place: string | null;
   time: string;
 };
 export const ThreadHeader: React.FC<ThreadHeaderProps> = ({
-  username,
+  displayName,
   place,
   time,
   ...props
@@ -24,7 +24,7 @@ export const ThreadHeader: React.FC<ThreadHeaderProps> = ({
           margin-right: ${styles.SPACE_R};
         `}
       >
-        {username}
+        {displayName}
       </span>
       <span
         css={css`

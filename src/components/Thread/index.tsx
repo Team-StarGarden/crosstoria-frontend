@@ -7,26 +7,21 @@ import * as styles from '../../constants';
 
 import MainThread from './MainThread';
 import EndThread from './EndThread';
+import { Character } from '../../utils/Character';
+import SubThread from './SubThread';
 
-type ThreadInfoProps = {
-  username: string;
+interface ThreadInfo {
+  id: number;
+  character: Character;
   place: string;
   time: string;
   contents: string;
-  goodCount: number;
-  subThreadCount: number;
-  profileIMG: string;
-};
+  likeCount: number;
+  subThreads: ThreadInfo[];
+}
 
-export const Thread: React.FC<ThreadInfoProps> = ({
-  children,
-  username,
-  time,
-  place,
-  contents,
-  goodCount,
-  subThreadCount,
-  profileIMG,
+export const Thread: React.FC<{ [threadInfo: string]: ThreadInfo }> = ({
+  threadInfo: { character, place, time, contents, likeCount, subThreads },
 }) => {
   return (
     <div
@@ -36,15 +31,25 @@ export const Thread: React.FC<ThreadInfoProps> = ({
       `}
     >
       <MainThread
-        profilePath={profileIMG}
-        username={username}
+        profilePath={character.profileIMG}
+        displayName={character.displayName}
         time={time}
         place={place}
       >
         {contents}
       </MainThread>
-      {children}
-      <EndThread goodCount={goodCount} subThreadCount={subThreadCount} />
+      {subThreads.map(subThread => {
+        return (
+          <SubThread
+            key={subThread.id}
+            {...subThread}
+            childThreadCount={subThread.subThreads.length}
+          >
+            {subThread.contents}
+          </SubThread>
+        );
+      })}
+      <EndThread likeCount={likeCount} subThreadCount={subThreads.length} />
     </div>
   );
 };
